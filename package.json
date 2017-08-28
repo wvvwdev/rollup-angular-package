@@ -1,9 +1,9 @@
 {
-  "name": "@wwwdev.io/rollup-ngx-starter",
+  "name": "@wwwdev.io/rollup-angular-package",
   "version": "0.1.0",
   "description": "Rollup starter to create angularX package.",
   "author": "Ścibor Rudnicki <scibor.rudnicki@wwwdev.io>",
-  "homepage": "https://github.com/wwwdevio/rollup-ngx-starter#readme",
+  "homepage": "https://github.com/wwwdevio/rollup-angular-package#readme",
   "main": "dist/bundle.umd.js",
   "module": "dist/index.js",
   "jsnext:main": "dist/index.js",
@@ -90,9 +90,9 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wwwdevio/rollup-ngx-starter.git"
+    "url": "git+https://github.com/wwwdevio/rollup-angular-package.git"
   },
   "bugs": {
-    "url": "https://github.com/wwwdevio/rollup-ngx-starter/issues"
+    "url": "https://github.com/wwwdevio/rollup-angular-package/issues"
   }
 }
