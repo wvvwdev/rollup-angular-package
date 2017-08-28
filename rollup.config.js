@@ -25,7 +25,7 @@ export default {
     // core output options
     file: 'dist/bundle.umd.js',    // required
     format: 'umd',  // required
-    name: 'rollup.ngx.starter',
+    name: 'rollup.angular.package',
 
     // advanced output options
     // paths: ,

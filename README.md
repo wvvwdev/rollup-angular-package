@@ -1,2 +1,2 @@
-# rollup-ngx-starter
-Rollup angularX starter
+# rollup-angular-package
+Example rollup angular package starter.
