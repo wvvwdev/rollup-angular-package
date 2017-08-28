@@ -1,0 +1,98 @@
+{
+  "name": "@wwwdev.io/rollup-ngx-starter",
+  "version": "0.1.0",
+  "description": "Rollup starter to create angularX package.",
+  "author": "Ścibor Rudnicki <scibor.rudnicki@wwwdev.io>",
+  "homepage": "https://github.com/wwwdevio/rollup-ngx-starter#readme",
+  "main": "dist/bundle.umd.js",
+  "module": "dist/index.js",
+  "jsnext:main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "contributors": [
+    "Ścibor Rudnicki <scibor.rudnicki@wwwdev.io>"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "scripts": {
+    "clean": "rimraf ./dist ./node_modules",
+    "bundle": "rollup -c rollup.config.js",
+    "prebuild": "npm install",
+    "build": "./node_modules/.bin/ngc -p tsconfig.json",
+    "postbuild": "npm run html",
+    "prepublish": "",
+    "start": "npm run build && npm run bundle",
+    "start:clean": "npm run clean && npm start",
+    "html": "cd src && copyfiles **/*.html *.html *.scss **/*.scss *.css **/*.css ../dist",
+    "test": "./node_modules/karma/bin/karma start karma.conf.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@ngx-prism/core": "^0.2.16"
+  },
+  "devDependencies": {
+    "@angular/animations": "^4.3.6",
+    "@angular/cdk": "^2.0.0-beta.8",
+    "@angular/common": "^4.3.6",
+    "@angular/compiler": "^4.3.6",
+    "@angular/compiler-cli": "^4.3.6",
+    "@angular/core": "^4.3.6",
+    "@angular/forms": "^4.3.6",
+    "@angular/http": "^4.3.6",
+    "@angular/platform-browser": "^4.3.6",
+    "@angular/platform-browser-dynamic": "^4.3.6",
+    "@angular/tsc-wrapped": "^4.3.6",
+    "@types/angular": "^1.6.31",
+    "@types/jasmine": "^2.5.54",
+    "@types/karma": "^0.13.36",
+    "@types/lodash": "^4.14.74",
+    "@types/lodash-es": "^4.14.6",
+    "@types/node": "^8.0.24",
+    "clean-css": "^4.1.7",
+    "codelyzer": "^3.1.2",
+    "copyfiles": "^1.2.0",
+    "core-js": "^2.5.0",
+    "html-minifier": "^3.5.3",
+    "jasmine": "^2.7.0",
+    "jasmine-core": "^2.7.0",
+    "jasmine-spec-reporter": "^4.2.1",
+    "karma": "^1.7.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-coverage": "^1.1.1",
+    "karma-firefox-launcher": "^1.0.1",
+    "karma-jasmine": "^1.1.0",
+    "karma-jasmine-html-reporter": "^0.2.2",
+    "karma-rollup-preprocessor": "^4.0.4",
+    "karma-typescript": "^3.0.5",
+    "lodash": "^4.17.4",
+    "lodash-es": "^4.17.4",
+    "node-sass": "^4.5.3",
+    "reflect-metadata": "^0.1.10",
+    "rimraf": "^2.6.1",
+    "rollup": "^0.48.2",
+    "rollup-plugin-angular": "^0.5.3",
+    "rollup-plugin-buble": "^0.15.0",
+    "rollup-plugin-commonjs": "^8.2.0",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-typescript": "^0.8.1",
+    "rollup-plugin-uglify": "^2.0.1",
+    "rxjs": "^5.4.3",
+    "ts-node": "^3.3.0",
+    "tslint": "^5.6.0",
+    "typescript": "^2.5.1",
+    "uglify-es": "^3.0.28",
+    "zone.js": "^0.8.17"
+  },
+  "keywords": [
+    "Angular",
+    "Component"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wwwdevio/rollup-ngx-starter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wwwdevio/rollup-ngx-starter/issues"
+  }
+}
