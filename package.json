@@ -1,6 +1,6 @@
 {
   "name": "@wwwdev.io/rollup-angular-package",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Rollup starter to create angularX package.",
   "author": "Ścibor Rudnicki <scibor.rudnicki@wwwdev.io>",
   "homepage": "https://github.com/wwwdevio/rollup-angular-package#readme",
