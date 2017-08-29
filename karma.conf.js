@@ -1,10 +1,12 @@
 // Karma configuration
 
 const angular = require('rollup-plugin-angular');
-const buble = require('rollup-plugin-buble');
 const commonjs = require('rollup-plugin-commonjs');
 const nodeResolve = require('rollup-plugin-node-resolve');
 const typescript = require('rollup-plugin-typescript');
+const uglify = require('rollup-plugin-uglify');
+const uglifyEs = require('uglify-es');
+
 
 // rollup-plugin-angular addons
 const sass = require('node-sass');
@@ -58,9 +60,9 @@ module.exports = function(config) {
 
     rollupPreprocessor: {
       // will help to prevent conflicts between different tests entries
-      moduleName: 'wwwdev.io.rollup-ngx-starter',
+      name: 'wwwdev.io.rollup-angular-package',
       format: 'umd',
-      sourceMap: true,
+      sourcemap: true,
       // rollup settings. See Rollup documentation
       plugins: [
         angular({
@@ -113,7 +115,8 @@ module.exports = function(config) {
         }),
         typescript({
           typescript: require('./node_modules/typescript')
-        })
+        }),
+        uglify({}, uglifyEs.minify)
       ]
     },
 
